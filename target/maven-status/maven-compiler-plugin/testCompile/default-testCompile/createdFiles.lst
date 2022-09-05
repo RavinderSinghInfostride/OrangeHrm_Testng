@@ -1,0 +1,7 @@
+OrangeHrm\Pages\PimPage.class
+OrangeHrm\Test\LoginTest.class
+OrangeHrm\Pages\LoginPage.class
+OrangeHrm\Pages\PageFactory.class
+OrangeHrm\Test\BaseClass.class
+OrangeHrm\Pages\AdminPage.class
+OrangeHrm\Test\TestToAddAndVerifyUser.class
