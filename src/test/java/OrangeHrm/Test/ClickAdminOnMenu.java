@@ -1,7 +1,5 @@
 package OrangeHrm.Test;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class ClickAdminOnMenu extends BaseClass {

@@ -18,7 +18,7 @@ public class PimPage {
     By searchBtn = By.xpath("//button[@type='submit']");
     By deleteButton = By.xpath("(//div[@class='oxd-table-cell-actions']//button)[1]");
     By confirmDelete = By.xpath("(//div[@class='orangehrm-modal-footer']//button)[2]");
-    String empID = "0227";
+    String empID = "0066";
 
     public PimPage(WebDriver driver) {
         this.driver = driver;

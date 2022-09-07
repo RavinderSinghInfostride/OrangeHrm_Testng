@@ -28,7 +28,7 @@ public class LeavePage {
         Assert.isTrue(actual.equals("Apply Leave"), "Expected result does not match with actual result");
     }
 
-    public void fillDetailsForLeave() throws InterruptedException {
+    public void fillDetailsForLeave(){
         driver.findElement(leaveTypeDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'CAN - Bereavement')]")).click();
         driver.findElement(toDate).sendKeys(toDateValue);
