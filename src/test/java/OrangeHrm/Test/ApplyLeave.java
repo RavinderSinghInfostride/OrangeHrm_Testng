@@ -9,7 +9,7 @@ public class ApplyLeave extends BaseClass {
     }
 
     @Test(dependsOnMethods = "login")
-    public void leaveMenuOptionClick(){
+    public void leaveMenuOptionClick() {
         pageFactory.getPimPage().clickLeaveMenuOption();
     }
 
@@ -17,5 +17,11 @@ public class ApplyLeave extends BaseClass {
     public void applyLeave() throws InterruptedException {
         pageFactory.getLeavePage().clickApplyNavMenuOption();
         pageFactory.getLeavePage().fillDetailsForLeave();
+    }
+
+    @Test(dependsOnMethods = "applyLeave")
+    public void verifyLeave() {
+        pageFactory.getLeavePage().verifyLeave();
+        logout();
     }
 }

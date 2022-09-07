@@ -33,6 +33,7 @@ public class PageFactory {
         }
         return adminPage;
     }
+
     public LeavePage getLeavePage() {
         if (leavePage == null) {
             leavePage = new LeavePage(driver);

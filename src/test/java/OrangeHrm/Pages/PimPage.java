@@ -1,7 +1,6 @@
 package OrangeHrm.Pages;
 
 import net.jodah.failsafe.internal.util.Assert;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,7 +31,7 @@ public class PimPage {
         Assert.isTrue(actual.equals("User Management"), "Expected result does not match with actual result");
     }
 
-    public void deleteUser(){
+    public void deleteUser() {
         driver.findElement(empIdInput).sendKeys(empID);
         driver.findElement(searchBtn).click();
         driver.findElement(deleteButton).click();
@@ -40,7 +39,7 @@ public class PimPage {
         driver.findElement(confirmDelete).click();
     }
 
-    public void clickLeaveMenuOption(){
+    public void clickLeaveMenuOption() {
         driver.findElement(leaveMenuOption).click();
         String actual = driver.findElement(By.xpath("//h6[contains(@class,'oxd-topbar-header-breadcrumb-module')]")).getText();
         Assert.isTrue(actual.equals("Leave"), "Expected result does not match with actual result");

@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +25,7 @@ public class BaseClass {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         pageFactory = new PageFactory(driver);
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(6));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='orangehrm-login-branding']")));
     }
 
@@ -36,8 +34,9 @@ public class BaseClass {
 //        driver.close();
 //    }
 
-    public static void verification(String locator, String expected) {
-        String actual = driver.findElement(By.xpath(locator)).getText();
-        Assert.isTrue(actual.equals(expected), "Expected result does not match with actual result");
+    public static void logout() {
+        driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
+        driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
     }
+
 }

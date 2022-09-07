@@ -16,7 +16,6 @@ public class TestToAddAndVerifyUser extends BaseClass {
     @Test(dependsOnMethods = "clickAdminMenuOption")
     public void addUser() throws InterruptedException {
         pageFactory.getAdminPage().clickAddButton();
-        verification("(//h6)[2]", "Add User");
         pageFactory.getAdminPage().AddUser();
     }
 

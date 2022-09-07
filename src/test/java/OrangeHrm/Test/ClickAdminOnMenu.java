@@ -9,6 +9,7 @@ public class ClickAdminOnMenu extends BaseClass {
     public void login() {
         pageFactory.getLoginPage().login();
     }
+
     @Test(dependsOnMethods = "login")
     public void clickAdminMenuOption() {
         pageFactory.getPimPage().clickAdminMenuOption();

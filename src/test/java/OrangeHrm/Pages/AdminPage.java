@@ -54,18 +54,16 @@ public class AdminPage {
         driver.findElement(passwordInput).sendKeys("Admin1234@");
         driver.findElement(confirmPasswordInput).sendKeys("Admin1234@");
         String passwordText = driver.findElement(confirmPasswordInput).getText();
-//        wait.until(ExpectedConditions.textToBePresentInElementLocated(confirmPasswordInput, passwordText));
         Thread.sleep(3000);
-        driver.findElement(saveButton).click();;
+        driver.findElement(saveButton).click();
     }
 
-    public void verifyAddedUser() throws InterruptedException {
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(pageVerification,"User Management"));
+    public void verifyAddedUser() {
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(pageVerification, "User Management"));
         driver.findElement(searchUserNameInput).sendKeys(newUserName);
         driver.findElement(userRoleDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Admin')]")).click();
         driver.findElement(searchButton).click();
-        Thread.sleep(3000);
         boolean isAdminDisplayed = driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]", newUserName))).isDisplayed();
         Assert.assertTrue(isAdminDisplayed, "User is not added");
     }
