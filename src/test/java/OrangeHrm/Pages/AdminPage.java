@@ -2,7 +2,6 @@ package OrangeHrm.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,8 +10,10 @@ import java.time.Duration;
 
 public class AdminPage {
     WebDriver driver;
+    WebDriverWait wait;
+    By pageVerification = By.xpath("//h6[contains(@class,'oxd-topbar-header-breadcrumb-level')]");
     //To add user
-    By addButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");
+    By addButton = By.xpath("//div[@class='orangehrm-header-container']/button");
 
     //Add user required fields
     By userRoleDropdown = By.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[1]");
@@ -30,15 +31,17 @@ public class AdminPage {
 
     public AdminPage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void clickAddButton() {
         driver.findElement(addButton).click();
+        String actual = driver.findElement(By.xpath("//h6[contains(@class,'orangehrm-main-title')]")).getText();
+        net.jodah.failsafe.internal.util.Assert.isTrue(actual.equals("Add User"), "Expected result does not match with actual result");
     }
 
     public void AddUser() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
-        String random = String.valueOf((int) (Math.random() * (100 - 50 + 1) + 50));
+        String random = String.valueOf((int) (Math.random() * (100 - 1 + 1) + 1));
         newUserName = "AdminRavinder" + random;
         driver.findElement(userRoleDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Admin')]")).click();
@@ -50,12 +53,14 @@ public class AdminPage {
         driver.findElement(usernameInput).sendKeys(newUserName);
         driver.findElement(passwordInput).sendKeys("Admin1234@");
         driver.findElement(confirmPasswordInput).sendKeys("Admin1234@");
+        String passwordText = driver.findElement(confirmPasswordInput).getText();
+//        wait.until(ExpectedConditions.textToBePresentInElementLocated(confirmPasswordInput, passwordText));
         Thread.sleep(3000);
-        driver.findElement(saveButton).click();
-        Thread.sleep(6000);
+        driver.findElement(saveButton).click();;
     }
 
     public void verifyAddedUser() throws InterruptedException {
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(pageVerification,"User Management"));
         driver.findElement(searchUserNameInput).sendKeys(newUserName);
         driver.findElement(userRoleDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Admin')]")).click();

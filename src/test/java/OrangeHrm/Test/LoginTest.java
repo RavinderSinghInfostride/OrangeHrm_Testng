@@ -8,9 +8,4 @@ public class LoginTest extends BaseClass {
     public void login() {
         pageFactory.getLoginPage().login();
     }
-
-    @Test(dependsOnMethods = "login")
-    public void verification() {
-        verification("//h6", "PIM");
-    }
 }

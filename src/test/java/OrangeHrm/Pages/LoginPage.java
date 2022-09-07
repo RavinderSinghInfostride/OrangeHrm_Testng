@@ -1,5 +1,6 @@
 package OrangeHrm.Pages;
 
+import net.jodah.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -17,6 +18,8 @@ public class LoginPage {
         driver.findElement(username).sendKeys("Admin");
         driver.findElement(password).sendKeys("admin123");
         driver.findElement(loginButton).click();
+        String actual = driver.findElement(By.xpath("//h6")).getText();
+        Assert.isTrue(actual.equals("PIM"), "Expected result does not match with actual result");
     }
 
 }

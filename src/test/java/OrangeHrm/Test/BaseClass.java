@@ -24,6 +24,7 @@ public class BaseClass {
         driver = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         pageFactory = new PageFactory(driver);
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(6));
