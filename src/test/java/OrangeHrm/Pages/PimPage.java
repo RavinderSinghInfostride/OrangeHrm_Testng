@@ -13,6 +13,8 @@ public class PimPage {
     WebDriver driver;
     WebDriverWait wait;
     By adminMenuOption = By.xpath("(//a[@class='oxd-main-menu-item'])[1]");
+    // Leave side menu option xpath
+    By leaveMenuOption = By.xpath("(//a[@class='oxd-main-menu-item'])[2]");
     By empIdInput = By.xpath("(//input[contains(@class,'oxd-input')])[2]");
     By searchBtn = By.xpath("//button[@type='submit']");
     By deleteButton = By.xpath("(//div[@class='oxd-table-cell-actions']//button)[1]");
@@ -30,11 +32,17 @@ public class PimPage {
         Assert.isTrue(actual.equals("User Management"), "Expected result does not match with actual result");
     }
 
-    public void deleteUser() throws InterruptedException{
+    public void deleteUser(){
         driver.findElement(empIdInput).sendKeys(empID);
         driver.findElement(searchBtn).click();
         driver.findElement(deleteButton).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(confirmDelete));
         driver.findElement(confirmDelete).click();
+    }
+
+    public void clickLeaveMenuOption(){
+        driver.findElement(leaveMenuOption).click();
+        String actual = driver.findElement(By.xpath("//h6[contains(@class,'oxd-topbar-header-breadcrumb-module')]")).getText();
+        Assert.isTrue(actual.equals("Leave"), "Expected result does not match with actual result");
     }
 }

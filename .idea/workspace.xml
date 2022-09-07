@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dad49f02-d42c-40d7-bff7-77095f488cb9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PageFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PimPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/ClickAdminOnMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/ClickAdminOnMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/TestToAddAndVerifyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/TestToAddAndVerifyUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/PimPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/PimPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/ClickAdminOnMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/ClickAdminOnMenu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +58,42 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Regression">
+  <component name="RunManager" selected="TestNG.ApplyLeave">
+    <configuration name="ApplyLeave" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="OrangeHrm_Testng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="OrangeHrm.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="OrangeHrm.Test" />
+      <option name="MAIN_CLASS_NAME" value="OrangeHrm.Test.ApplyLeave" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplyLeave.login" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="OrangeHrm_Testng" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="OrangeHrm.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="OrangeHrm.Test" />
+      <option name="MAIN_CLASS_NAME" value="OrangeHrm.Test.ApplyLeave" />
+      <option name="METHOD_NAME" value="login" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClickAdminOnMenu" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OrangeHrm_Testng" />
       <extension name="coverage">
@@ -91,23 +121,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="OrangeHrm.Test" />
       <option name="MAIN_CLASS_NAME" value="OrangeHrm.Test.DeleteUser" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="OrangeHrm_Testng" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="OrangeHrm.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="OrangeHrm.Test" />
-      <option name="MAIN_CLASS_NAME" value="OrangeHrm.Test.LoginTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -162,39 +175,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestToAddAndVerifyUser.clickAdminMenuOption" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="OrangeHrm_Testng" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="OrangeHrm.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="OrangeHrm.Test" />
-      <option name="MAIN_CLASS_NAME" value="OrangeHrm.Test.TestToAddAndVerifyUser" />
-      <option name="METHOD_NAME" value="clickAdminMenuOption" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="TestNG.Regression" />
-      <item itemvalue="TestNG.TestToAddAndVerifyUser.clickAdminMenuOption" />
+      <item itemvalue="TestNG.ApplyLeave" />
+      <item itemvalue="TestNG.ApplyLeave.login" />
       <item itemvalue="TestNG.DeleteUser" />
       <item itemvalue="TestNG.ClickAdminOnMenu" />
-      <item itemvalue="TestNG.LoginTest" />
       <item itemvalue="TestNG.TestToAddAndVerifyUser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ApplyLeave" />
+        <item itemvalue="TestNG.ApplyLeave.login" />
+        <item itemvalue="TestNG.TestToAddAndVerifyUser" />
         <item itemvalue="TestNG.ClickAdminOnMenu" />
         <item itemvalue="TestNG.DeleteUser" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.TestToAddAndVerifyUser" />
-        <item itemvalue="TestNG.TestToAddAndVerifyUser.clickAdminMenuOption" />
       </list>
     </recent_temporary>
   </component>

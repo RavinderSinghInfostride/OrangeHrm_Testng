@@ -31,10 +31,10 @@ public class BaseClass {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='orangehrm-login-branding']")));
     }
 
-    @AfterClass
-    public static void close() throws InterruptedException {
-        driver.close();
-    }
+//    @AfterClass
+//    public static void close() throws InterruptedException {
+//        driver.close();
+//    }
 
     public static void verification(String locator, String expected) {
         String actual = driver.findElement(By.xpath(locator)).getText();
