@@ -22,6 +22,5 @@ public class ApplyLeave extends BaseClass {
     @Test(dependsOnMethods = "applyLeave")
     public void verifyLeave() {
         pageFactory.getLeavePage().verifyLeave();
-        logout();
     }
 }

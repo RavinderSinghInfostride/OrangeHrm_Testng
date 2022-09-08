@@ -16,6 +16,5 @@ public class LeaveEntitlementsAndUsageReport extends BaseClass {
     @Test(dependsOnMethods = "leaveMenuOptionClick")
     public void leaveEntitlementUsageReport() throws InterruptedException {
         pageFactory.getLeavePage().leaveEntitlementReportGenerate();
-        logout();
     }
 }

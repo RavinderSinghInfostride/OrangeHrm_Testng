@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import java.time.Duration;
 
 public class BaseClass {
@@ -27,14 +26,10 @@ public class BaseClass {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='orangehrm-login-branding']")));
     }
 
-    @AfterClass
-    public static void close() throws InterruptedException {
-        driver.close();
-    }
-
-    public static void logout() {
-        driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
-        driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
-    }
-
+//    @AfterClass
+//    public static void close() throws InterruptedException {
+//        driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
+//        driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
+//        driver.close();
+//    }
 }

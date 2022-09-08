@@ -3,27 +3,31 @@ package OrangeHrm.Pages;
 import net.jodah.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LeavePage {
     WebDriver driver;
-    String navMenuApply = "Apply";
+    WebDriverWait wait;
+
     By leaveTypeDropdown = By.xpath("//div[contains(@class,'oxd-select-text--active')]");
     By fromDate = By.xpath("(//div[contains(@class,'oxd-date-input')]/input)[1]");
     By toDate = By.xpath("(//div[contains(@class,'oxd-date-input')]/input)[2]");
     By commentsInput = By.xpath("//textarea[contains(@class,'oxd-textarea')]");
     By applyLeaveButton = By.xpath("//button[contains(@class,'oxd-button--medium oxd-button--secondary orangehrm-left-space')]");
+    By generateLeaveReportBtn = By.xpath("//div[contains(@class,'oxd-form-actions')]//button[contains(@class,'oxd-button')]");
+
     String fromDateValue = "2022-09-01";
     String toDateValue = "2022-09-02";
-
-    //Verify leave applied is added
     String navMenuMyLeave = "My Leave";
-
-    //TC-02
     String navMenuReports = "Reports";
-    By generateLeaveReportBtn = By.xpath("//div[contains(@class,'oxd-form-actions')]//button[contains(@class,'oxd-button')]");
+    String navMenuApply = "Apply";
 
     public LeavePage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void clickApplyNavMenuOption() {
@@ -55,8 +59,9 @@ public class LeavePage {
         driver.findElement(By.xpath("//*[contains(text(),'Leave Entitlements and Usage Report')]")).click();
         String actual = driver.findElement(By.xpath("//div[@class='oxd-table-filter-header']//h5")).getText();
         Assert.isTrue(actual.equals("Leave Entitlements and Usage Report"), "Expected result does not match with actual result");
-        Thread.sleep(2000);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[contains(@class,'oxd-input-field-error-message')]")));
         driver.findElement(generateLeaveReportBtn).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Leave Entitlements (Days)')]")));
         String actual2 = driver.findElement(By.xpath("//div[contains(text(),'Leave Entitlements (Days)')]")).getText();
         Assert.isTrue(actual2.equals("Leave Entitlements (Days)"), "Expected result does not match with actual result");
     }

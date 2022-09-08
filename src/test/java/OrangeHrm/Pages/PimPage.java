@@ -5,20 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class PimPage {
     WebDriver driver;
     WebDriverWait wait;
+
     By adminMenuOption = By.xpath("(//a[@class='oxd-main-menu-item'])[1]");
-    // Leave side menu option xpath
     By leaveMenuOption = By.xpath("(//a[@class='oxd-main-menu-item'])[2]");
     By empIdInput = By.xpath("(//input[contains(@class,'oxd-input')])[2]");
     By searchBtn = By.xpath("//button[@type='submit']");
     By deleteButton = By.xpath("(//div[@class='oxd-table-cell-actions']//button)[1]");
     By confirmDelete = By.xpath("(//div[@class='orangehrm-modal-footer']//button)[2]");
-    String empID = "0066";
+
+    String empID = "0243";
 
     public PimPage(WebDriver driver) {
         this.driver = driver;
