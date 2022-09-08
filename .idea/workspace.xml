@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad49f02-d42c-40d7-bff7-77095f488cb9" name="Changes" comment="">
+    <list default="true" id="dad49f02-d42c-40d7-bff7-77095f488cb9" name="Changes" comment="Un commented the xml code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/PimPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/testNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/ClickAdminOnMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/ClickAdminOnMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/TestToAddAndVerifyUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/TestToAddAndVerifyUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/PimPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/PimPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/ClickAdminOnMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/ClickAdminOnMenu.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -207,6 +206,21 @@
       <option name="presentableId" value="Default" />
       <updated>1662031036256</updated>
     </task>
+    <task id="LOCAL-00001" summary="mere mrji">
+      <created>1662624792888</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662624792888</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Un commented the xml code">
+      <created>1662625079520</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662625079520</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,5 +233,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mere mrji" />
+    <MESSAGE value="Un commented the xml code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Un commented the xml code" />
   </component>
 </project>
