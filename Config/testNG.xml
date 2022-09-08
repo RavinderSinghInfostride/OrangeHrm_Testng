@@ -3,6 +3,7 @@
 <suite name="All Test Cases" verbose="1" >
     <test name="Verify user is logged in">
         <parameter name="testRunId1" value="TCTC-1"/>
+        <parameter name="browserName" value="chrome"></parameter>
         <classes>
             <class name="OrangeHrm.Test.LoginTest"/>
         </classes>
@@ -10,6 +11,7 @@
 
     <test name="Click Admin Sidebar Option">
         <parameter name="testRunId2" value="TCTC-2">
+<!--            <parameter name="browserName" value="firefox"></parameter>-->
             <classes>
                 <class name="OrangeHrm.Test.ClickAdminOnMenu"/>
             </classes>
