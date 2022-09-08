@@ -7,6 +7,7 @@ public class PageFactory {
     private LoginPage loginPage;
     private PimPage pimPage;
     private AdminPage adminPage;
+    private LeavePage leavePage;
 
     public PageFactory(WebDriver driver) {
         this.driver = driver;
@@ -31,5 +32,12 @@ public class PageFactory {
             adminPage = new AdminPage(driver);
         }
         return adminPage;
+    }
+
+    public LeavePage getLeavePage() {
+        if (leavePage == null) {
+            leavePage = new LeavePage(driver);
+        }
+        return leavePage;
     }
 }

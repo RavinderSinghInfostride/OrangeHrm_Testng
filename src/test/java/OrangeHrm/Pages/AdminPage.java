@@ -5,17 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.time.Duration;
 
 public class AdminPage {
     WebDriver driver;
     WebDriverWait wait;
-    By pageVerification = By.xpath("//h6[contains(@class,'oxd-topbar-header-breadcrumb-level')]");
-    //To add user
-    By addButton = By.xpath("//div[@class='orangehrm-header-container']/button");
 
-    //Add user required fields
+    By pageVerification = By.xpath("//h6[contains(@class,'oxd-topbar-header-breadcrumb-level')]");
+    By addButton = By.xpath("//div[@class='orangehrm-header-container']/button");
     By userRoleDropdown = By.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[1]");
     By employeeNameInput = By.xpath("(//div/input)[2]");
     By statusDropdown = By.xpath("(//div[@class='oxd-select-text oxd-select-text--active'])[2]");
@@ -23,11 +20,10 @@ public class AdminPage {
     By passwordInput = By.xpath("(//div/input[@type='password'])[1]");
     By confirmPasswordInput = By.xpath("(//div/input[@type='password'])[2]");
     By saveButton = By.xpath("//button[contains(@class,'orangehrm-left-space')]");
-    String newUserName;
-
-    //To search the added user
     By searchUserNameInput = By.xpath("(//input[contains(@class,'oxd-input')])[2]");
     By searchButton = By.xpath("//div[@class='oxd-form-actions']/button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']");
+
+    String newUserName;
 
     public AdminPage(WebDriver driver) {
         this.driver = driver;
@@ -40,7 +36,7 @@ public class AdminPage {
         net.jodah.failsafe.internal.util.Assert.isTrue(actual.equals("Add User"), "Expected result does not match with actual result");
     }
 
-    public void AddUser() throws InterruptedException {
+    public void AddUser() {
         String random = String.valueOf((int) (Math.random() * (100 - 1 + 1) + 1));
         newUserName = "AdminRavinder" + random;
         driver.findElement(userRoleDropdown).click();
@@ -53,19 +49,16 @@ public class AdminPage {
         driver.findElement(usernameInput).sendKeys(newUserName);
         driver.findElement(passwordInput).sendKeys("Admin1234@");
         driver.findElement(confirmPasswordInput).sendKeys("Admin1234@");
-        String passwordText = driver.findElement(confirmPasswordInput).getText();
-//        wait.until(ExpectedConditions.textToBePresentInElementLocated(confirmPasswordInput, passwordText));
-        Thread.sleep(3000);
-        driver.findElement(saveButton).click();;
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("(//span[contains(@class,'oxd-input-field-error-message')])[1]")));
+        driver.findElement(saveButton).click();
     }
 
-    public void verifyAddedUser() throws InterruptedException {
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(pageVerification,"User Management"));
+    public void verifyAddedUser() {
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(pageVerification, "User Management"));
         driver.findElement(searchUserNameInput).sendKeys(newUserName);
         driver.findElement(userRoleDropdown).click();
         driver.findElement(By.xpath("//*[contains(text(),'Admin')]")).click();
         driver.findElement(searchButton).click();
-        Thread.sleep(3000);
         boolean isAdminDisplayed = driver.findElement(By.xpath(String.format("//div[contains(text(),'%s')]", newUserName))).isDisplayed();
         Assert.assertTrue(isAdminDisplayed, "User is not added");
     }

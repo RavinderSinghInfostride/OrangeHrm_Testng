@@ -1,6 +1,5 @@
 package OrangeHrm.Test;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseClass {

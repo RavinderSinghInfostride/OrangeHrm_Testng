@@ -1,7 +1,5 @@
 package OrangeHrm.Test;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class ClickAdminOnMenu extends BaseClass {
@@ -9,6 +7,7 @@ public class ClickAdminOnMenu extends BaseClass {
     public void login() {
         pageFactory.getLoginPage().login();
     }
+
     @Test(dependsOnMethods = "login")
     public void clickAdminMenuOption() {
         pageFactory.getPimPage().clickAdminMenuOption();
