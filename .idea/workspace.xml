@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="dad49f02-d42c-40d7-bff7-77095f488cb9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Config/testNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/AdminPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LeavePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Pages/LeavePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LeaveEntitlementsAndUsageReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrangeHrm/Test/LeaveEntitlementsAndUsageReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/AdminPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/AdminPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/LeavePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Pages/LeavePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrangeHrm/Test/BaseClass.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +62,7 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.LeaveEntitlementsAndUsageReport">
+  <component name="RunManager" selected="TestNG.Regression">
     <configuration name="ApplyLeave" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="OrangeHrm_Testng" />
       <extension name="coverage">

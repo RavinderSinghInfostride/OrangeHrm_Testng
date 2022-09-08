@@ -53,7 +53,6 @@ public class AdminPage {
         driver.findElement(usernameInput).sendKeys(newUserName);
         driver.findElement(passwordInput).sendKeys("Admin1234@");
         driver.findElement(confirmPasswordInput).sendKeys("Admin1234@");
-        String passwordText = driver.findElement(confirmPasswordInput).getText();
         Thread.sleep(3000);
         driver.findElement(saveButton).click();
     }
