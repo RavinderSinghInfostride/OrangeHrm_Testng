@@ -26,10 +26,10 @@ public class BaseClass {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='orangehrm-login-branding']")));
     }
 
-//    @AfterClass
-//    public static void close() throws InterruptedException {
-//        driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
-//        driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
-//        driver.close();
-//    }
+    @AfterClass
+    public static void close() throws InterruptedException {
+        driver.findElement(By.xpath("//span[@class='oxd-userdropdown-tab']")).click();
+        driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
+        driver.close();
+    }
 }
