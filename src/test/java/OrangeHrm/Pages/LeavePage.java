@@ -18,6 +18,9 @@ public class LeavePage {
     //Verify leave applied is added
     String navMenuMyLeave = "My Leave";
 
+    //TC-02
+    String navMenuReports = "Reports";
+
     public LeavePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -39,8 +42,17 @@ public class LeavePage {
     }
 
     public void verifyLeave() {
-        driver.findElement(By.xpath(String.format("//div[@class='oxd-topbar-body']//li[contains(text(),'')]/a[contains(text(),'%s')]", navMenuMyLeave))).click();
+        driver.findElement(By.xpath(String.format("//div[@class='oxd-topbar-body']//li/a[contains(text(),'%s')]", navMenuMyLeave))).click();
         String actual = driver.findElement(By.xpath("//div[contains(text(),'Ravinder wants to apply for leave')]")).getText();
         Assert.isTrue(actual.equals("Ravinder wants to apply for leave"), "Expected result does not match with actual result");
+    }
+
+    //TC-02
+    public void leaveEntitlementReportGenerate()
+    {
+        driver.findElement(By.xpath(String.format("//div[@class='oxd-topbar-body']//li/a[contains(text(),'%s')]", navMenuReports))).click();
+        driver.findElement(By.xpath("//*[contains(text(),'Leave Entitlements and Usage Report')]")).click();
+        String actual = driver.findElement(By.xpath("//div[@class='oxd-table-filter-header']//h5")).getText();
+        Assert.isTrue(actual.equals("Leave Entitlements and Usage Report"), "Expected result does not match with actual result");
     }
 }
